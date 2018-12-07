@@ -1,6 +1,4 @@
 #!/usr/bin/env node
-
-const dateutil = require('dateutil')
 const pattern = new RegExp('^(?:\r\n?|\n)*<!--([^]*?)-->') // eslint-disable-line
 
 const parse = module.exports = function parse (input) {
@@ -36,16 +34,6 @@ const parse = module.exports = function parse (input) {
     // boolean
     if (value === 'true') return true
     if (value === 'false') return false
-
-    // date (within 200 years of today's date)
-    var date = dateutil.parse(value)
-    if (date.type !== 'unknown_date') {
-      delete date.type
-      delete date.size
-      var now = new Date().getFullYear()
-      var then = date.getFullYear()
-      if (Math.abs(now - then) < 200) return date
-    }
 
     // number
     var num = +value

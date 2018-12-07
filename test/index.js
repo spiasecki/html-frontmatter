@@ -66,18 +66,6 @@ describe('html-frontmatter', function () {
     assert.strictEqual(n.stringy, 'I am not a number')
   })
 
-  it('coerces YMD-ish date strings into Dates', function () {
-    var n = fm(fixtures.dates)
-    assert.strictEqual(n.date1.getFullYear(), 2012)
-    assert.strictEqual(n.date1.getMonth(), 4)
-    assert.strictEqual(n.date1.getDate(), 31)
-    assert.strictEqual(n.date2.getFullYear(), 2012)
-    assert.strictEqual(n.date3.getFullYear(), 2012)
-    assert.strictEqual(n.not_a_date1, 200)
-    assert.strictEqual(n.not_a_date2, 'cheese')
-    assert.strictEqual(n.not_a_date3, '2015 people')
-  })
-
   // Convenience
 
   it('exposes its regex pattern as `pattern`', function () {
