@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 const pattern = new RegExp('^(?:\r\n?|\n)*<!--([^]*?)-->') // eslint-disable-line
 
 const parse = module.exports = function parse (input) {
