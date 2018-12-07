@@ -26,9 +26,7 @@
     "mocha": "^3.2.0",
     "standard": "^7.1.0"
   },
-  "dependencies": {
-    "dateutil": "^0.1.0"
-  },
+  "dependencies": {},
   "standard": {
     "env": {
       "mocha": true
