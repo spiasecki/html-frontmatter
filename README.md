@@ -2,11 +2,12 @@
 
 This is a "mini" version of [html-frontmatter](https://github.com/zeke/html-frontmatter) meant for client side use.
 
-
 ## Differences from the original:
 - dateutil dependency and YMD-ish string formatting was removed
-- an transpiled es5 dist version was added
+- a transpiled es5 dist version was added
+- updated dependencies
 
+## Html Frontmatter
 Extract key-value metadata from HTML comments
 
 In the world of printed books, [front
